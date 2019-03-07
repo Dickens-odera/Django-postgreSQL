@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '*-a9w$pq&mt1*k@k0dl4+mi*6czjyda%fydq5y^y@ptszxinr!'
-
+#http://localhost:8000/admin
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost:8000']
-
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['http://localhost:8000/']
 
 # Application definition
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'posts',
+    'students',
     'rest_framework',
     'rest_framework.authtoken',
     'crispy_forms',
@@ -126,7 +127,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-""" REST_FRAMEWORK = {
+#djangorestframeworkconfig
+
+REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES':(
         'rest_framework.authentication.TokenAuthentication'
 
@@ -136,4 +139,4 @@ STATIC_URL = '/static/'
         #'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
 
     )
-} """
+}

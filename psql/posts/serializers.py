@@ -17,3 +17,4 @@ class PostsSerializer(serializers.ModelSerializer):
         if title_to_validate.exists():
             raise serializers.ValidationError('The title already exists')
         return value
+        
