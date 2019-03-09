@@ -24,4 +24,6 @@ urlpatterns = [
     path('auth-token/',views.obtain_auth_token, name="api-token"),
     url(r'^api-auth/',include('rest_framework.urls')),
     path('students/', include('students.urls')),
+    url(r'^oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+
 ]

@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'crispy_forms',
+    'oauth2_provider',
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -140,3 +143,11 @@ REST_FRAMEWORK = {
 
     )
 }
+'''
+MIDDLEWARE_CLASSES = (
+    # ...
+    'corsheaders.middleware.CorsMiddleware',
+    # ...
+)
+CORS_ORIGIN_ALLOW_ALL = True
+'''
