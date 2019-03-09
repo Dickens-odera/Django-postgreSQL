@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from .serializers import PostsSerializer
 from .models import Posts
 from rest_framework.authentication import TokenAuthentication
@@ -10,7 +10,7 @@ class PostsView(viewsets.ModelViewSet):
     #lookup_field = 'pk'
     serializer_class = PostsSerializer
     authentication_classes = (TokenAuthentication,)
-    permission_classes =  (IsAuthenticated,)
+    permission_classes =  (permissions.IsAuthenticated,)
     
 
     '''
